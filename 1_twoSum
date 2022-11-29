@@ -1,0 +1,15 @@
+//Using map
+function twoSum (nums, target) {
+    let map = new Map();
+    
+    for(let i = 0; i < nums.length; i ++) {
+        let value = nums[i]
+        let pair = target - nums[i]
+        if(map.has(pair)) {
+            return [map.get(pair), i];
+        } else {
+            map.set(value, i);
+        }
+    }
+}
+//Time Complexity --> O(n)
